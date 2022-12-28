@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-# Styling
-
 st.set_page_config(page_title="Projet Pandas", page_icon='📊')
 
 st.title('📊 Mini Projet Pandas')
@@ -45,6 +43,8 @@ if uploaded_file is not None:
         st.write("L'ID que vous recherchez n'existe pas dans le fichier !")
 
 
-
-
-
+# Hide Left Menu
+st.markdown("""<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
