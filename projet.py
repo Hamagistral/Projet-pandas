@@ -13,7 +13,7 @@ st.markdown('___')
 if uploaded_file is not None:
 
     # Reading Excel File
-    df = pd.read_excel(uploaded_file)
+    df = pd.read_excel(uploaded_file, engine = 'openpyxl')
 
     # Preprocessing the Excel File (see steps in jupyter notebook)
     df[['Id','Nom', 'Prenom', 'Université', 'Grade', 'Spécialité','Structure de recherche Porteuse']] = df[['Id','Nom', 'Prenom', 'Université', 'Grade', 'Spécialité','Structure de recherche Porteuse']].fillna(method='ffill')
