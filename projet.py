@@ -24,7 +24,7 @@ if uploaded_file is not None:
     df.set_index('Id', inplace=True, drop=True)
 
     # Number input for ID
-    id = st.number_input("Donner l'ID de la personne :", min_value=1, value=1, step=1)
+    id = st.number_input("Entrer l'ID de la personne :", min_value=1, value=1, step=1)
     st.markdown('___')
 
     # Boolean to resize the dataframe, stored as a session state variable
