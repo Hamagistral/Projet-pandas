@@ -30,7 +30,7 @@ if uploaded_file is not None:
     st.markdown('___')
 
     # Boolean to resize the dataframe, stored as a session state variable
-    st.checkbox("Élargir le tableau :", value=False, key="use_container_width")
+    st.checkbox("Élargir le tableau", value=False, key="use_container_width")
 
     if id in df.index:
         st.write("Informations sur le professeur :")
