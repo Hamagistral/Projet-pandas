@@ -47,4 +47,4 @@ if uploaded_file is not None:
 st.markdown("""<style>
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-</style> """, unsafe_allow_html=True)
+</style>""", unsafe_allow_html=True)
