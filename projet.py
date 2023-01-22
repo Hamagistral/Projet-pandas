@@ -42,7 +42,6 @@ if uploaded_file is not None:
     else:
         st.write("L'ID que vous recherchez n'existe pas dans le fichier !")
 
-
 # Hide Left Menu
 st.markdown("""<style>
 #MainMenu {visibility: hidden;}
