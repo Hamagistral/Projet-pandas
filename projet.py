@@ -31,16 +31,17 @@ if uploaded_file is not None:
     st.checkbox("Élargir le tableau", value=False, key="use_container_width")
 
     if id in df.index:
-        st.write("Informations sur le professeur :")
+        st.subheader("Informations sur le professeur :")
         st.dataframe(df.loc[df.index == id, ['Nom', 'Prenom','Université','Grade','Spécialité','Structure de recherche Porteuse']].head(1), use_container_width=st.session_state.use_container_width)
         st.markdown('___')
-        st.write("Membre des structures de recherche partenaires :")
+        st.subheader("Membre des structures de recherche partenaires :")
         st.dataframe(df.loc[df.index == id, ['Membre des structures de recherche partenaires','Grade','Spécialité_partenaire','Intitulé de la structure']], use_container_width=st.session_state.use_container_width)
         st.markdown('___')
-        st.write("Publications Scientifiques :")
-        st.dataframe(df.loc[df.index == id, ['Publications Scientifiques','Nombre']], use_container_width=st.session_state.use_container_width)  
+        st.subheader("Publications Scientifiques :")
+        st.dataframe(df.loc[df.index == id, ['Publications Scientifiques','Nombre']], use_container_width=st.session_state.use_container_width) 
+
     else:
-        st.write("L'ID que vous recherchez n'existe pas dans le fichier !")
+        st.subheader("L'ID que vous recherchez n'existe pas dans le fichier !")
 
 # Hide Left Menu
 st.markdown("""<style>
